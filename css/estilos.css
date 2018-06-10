@@ -1,0 +1,358 @@
+/*Importar la fuente del sitio*/
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Handlee');
+
+/*Estilos generales del sitio*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Handlee', cursive;
+	background: rgba(200, 200, 200, 0.3);
+}
+/*Estilos del header*/
+header{
+	width: 100%;
+	height: 60px;
+	background: #6fa8dc;
+	color: #fff;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
+.container{
+	width: 95%;
+	margin: auto;
+}
+
+h1{
+	font-family: 'Lobster', cursive;
+	float: left;
+	margin: 10px;
+}
+
+header .container{
+	display: table;
+}
+
+section{
+	width: 100%;
+	margin-bottom: 25px;
+}
+
+
+/*Barra de menu responsive*/
+#menu-bar{
+	display: none;
+}
+
+header label{
+	float: right;
+	font-size: 25px;
+	margin: 6px 0px;
+}
+
+.menu{
+	position: absolute;
+	top: 50px;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgba(111,168,220, 0.8);
+	transition: all 0.6s;
+	transform: translateX(-100%);
+}
+
+.menu a{
+	font-family: 'Lobster', cursive;
+	display: block;
+	color: #fff;
+	font-size: 22px;
+	height: 30px;
+	margin: 15px 8px;
+	text-decoration: none;
+	padding: : 20px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.6)
+}
+
+.menu a:hover{
+	background: rgba(255, 255, 255, 0.3);
+}
+
+#menu-bar:checked ~ .menu{
+	transform: translateX(0%);
+}
+/*Cuando es sitio web cambia del boton de menu a barra completa*/
+@media (min-width:840px){
+	.menu{
+		position: static;
+		width: auto;
+		height: auto;
+		transform: translateX(0%);
+		float: right;
+		display: flex;
+	}
+
+	.menu a{
+		border: none;
+	}
+
+	header label{
+		display: none;
+	}
+}
+
+.juegoPhaser {	
+		 box-shadow: 10px 15px 15px 0 rgba(0, 0, 0, 0.4);
+	     margin-left: 10px;
+	     width: 800px;
+	     margin: auto;
+		 } 
+		.juegoPhaserH {	
+		 box-shadow: 10px 15px 15px 0 rgba(0, 0, 0, 0.4);
+	     margin: -10px;
+	     margin: auto;
+		 } 
+
+/*Estilos del banner*/
+#banner{
+	position: relative;
+	margin-top: 50px;
+}
+
+#banner img{
+	width: 100%;
+	height: 95vh;
+}
+
+h2{
+	font-family: 'Lobster', cursive;
+}
+
+#banner .container{
+	position: absolute;
+	top: 32%;
+	color: #fff;
+	text-align: center;
+	margin-left: 2%;
+}
+
+#banner a{
+	display: block;
+	width: 20%;
+	color: #fff;
+	text-decoration: none;
+	padding: 8px;
+	margin-top: 15%;
+	margin-left: 40%;
+	border: 3px solid #fff;
+	text-align: center;
+}
+
+#banner a:hover{
+	background: rgba(95, 73, 124, 0.6);
+}
+
+#welcome{
+	margin-top: 30px;
+	width: 65%;
+	margin: auto;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+#welcome a{
+	display: block;
+	width: 30%;
+	color: #6fa8dc;
+	text-decoration: none;
+	padding: 8px;
+	margin-top: 10%;
+	margin-left: 35%;
+	border: 10px solid #6fa8dc;
+	text-align: center;
+}
+
+#welcome h1{
+	float: center;
+}
+/*Responsive del banner*/
+@media only screen and (min-width: 720px){
+	#banner h2{
+		font-size: 8vh;
+	}
+}
+
+@media only screen and (max-width: 720px){
+	#banner h2{
+		font-size: 5vh;
+	}
+}
+
+@media only screen and (max-width: 480px){
+	#banner h2{
+		font-size: 3.8vh;
+	}
+}
+
+@media only screen and (max-width: 320px){
+	#banner h2{
+		font-size: 2vh;
+	}
+}
+
+
+/*Estilos de los pasos para iniciarse en la plataforma del index*/
+#pasos{
+	background: rgba(95, 73, 124, 0.3)
+}
+
+#pasos h3, h2, h1, p{
+	text-align: center;
+}
+
+#pasos .container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+#juega {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+#pasos article{
+	margin: 30px;
+}
+
+#pasos img{
+	width: 100%;
+	max-width: 280px;
+}
+
+/*Estilos de los pasos para iniciarse en la plataforma de la pagina de pasos*/
+#pasosDetallados{
+	background: rgba(95, 73, 124, 0.3)
+}
+
+#pasosDetallados h3, h2, p{
+	text-align: center;
+}
+
+#pasosDetallados .container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+#pasosDetallados article{
+	margin: 30px;
+	width: 50%;
+	text-align: center;
+}
+
+#pasosDetallados img{
+	width: 100%;
+	max-width: 280px;
+}
+
+/*Estilos usuarios del mes del index*/
+#usuarios{
+	text-align: center;
+	padding: 20px;
+}
+
+#usuarios .container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.info-user{
+	margin: 20px;
+}
+
+.info-user img{
+	width: 180px;
+	height: 180px;
+	border-radius: 60%;
+	border: 7px solid rgba(95, 73, 124, 0.5);
+}
+
+
+/*Estilos usuarios del mes de la pagina top-usuarios*/
+#usuarios{
+	text-align: center;
+	padding: 20px;
+}
+
+#usuarios .container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+@media only screen and (min-width: 1040px){
+	#usuarios .container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 55%;
+	text-align: center;
+	}
+}
+
+.info-user{
+	margin: 20px;
+}
+
+.info-user img{
+	width: 180px;
+	height: 180px;
+	border-radius: 60%;
+	border: 7px solid rgba(95, 73, 124, 0.5);
+}
+
+/*Estilos del footer de las redes sociales y contacto*/
+footer .container{
+	background: rgba(95, 73, 124, 0.3);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 35px;
+}
+
+.copy{
+	font-size: 20px;
+}
+
+.sociales{
+	width: 100%;
+	text-align: center;
+	font-size: 28px;
+}
+
+.sociales a{
+	text-decoration: none; 
+}
+
+/*Mapa google*/
+#map {
+	height: 400px;
+    width: 100%;
+}
+
+
+
+
+
+
